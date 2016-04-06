@@ -1,0 +1,202 @@
+body {
+  background: black;
+  font-family: "Josefin Slab";
+}
+header {
+  color: white;
+  text-align: center;
+  font-size: 150px;
+  margin-top: 70px;
+  letter-spacing: 5px;
+  font-family: "Wire One";
+}
+header span {
+  letter-spacing: 5px;
+}
+.sub-heading {
+  text-align: center;
+  color: white;
+  font-family: "Parisienne";
+  font-size: 45px;
+  margin-top: -24px;
+}
+.main-wrapper {
+   margin: 0 auto;
+  width: 90%;
+  background: white;
+  height: 90%;
+
+}
+.about-wrapper {
+  width: 90%;
+  margin-bottom: 90px;
+}
+.about-wrapper h2 {
+  padding-top: 40px;
+  line-height: 50px;
+  font-size: 30px;
+  margin-left: 30px;
+  font-size: 35px;
+  font-family: "Parisienne";
+}
+.about-wrapper h2 span {
+  font-size: 50px;
+  border-bottom: 2px solid red;
+}
+about-wrapper h2, .about-wrapper p {
+  width: 40%;
+  display: inline-block;
+  margin-left: 30px;
+  font-family: "Slabo 27px";
+}
+.about-wrapper img{
+  float: right;
+  border-radius: 3%;
+  width: 20%;
+  display: inline-block;
+}
+.gallery {
+  position: relative;
+  padding: 10px;
+  color: white;
+  background: #B71C1C;
+  text-align: center;
+}
+
+.gallery:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -26px;
+  width: 100%;
+  height: 60px;
+  background: #B71C1C;
+  -webkit-transform: skewY(2.2deg);
+  -moz-transform: skewY(2.2deg);
+  -ms-transform: skewY(2.2deg);
+  -o-transform: skewY(2.2deg);
+  transform: skewY(2.2deg);
+  -webkit-backface-visibility: hidden;
+}
+
+.images-scroll{
+  overflow: scroll;
+  height: 400px;
+}
+
+.gallery h2 {
+  font-size: 40px;
+  font-family: "Parisienne";
+  text-align: center;
+}
+.gallery h2 span {
+  font-size: 60px;
+  border-bottom: 2px solid white;
+}
+.row-1-photos img {
+  display: inline;
+  width: 375px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 5px 5px;
+  box-shadow: 3px 2px 2px black;
+  box-sizing: border-box;
+}
+ .row-2-photos img {
+  display: inline;
+  width: 375px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 5Px 5px;
+  box-shadow: 3px 2px 2px black;
+  box-sizing: border-box;
+}
+ .row-3-photos img {
+  display: inline;
+  width: 375px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 5Px 5px;
+  box-shadow: 3px 2px 2px black;
+  box-sizing: border-box;
+}
+
+
+.contact-wrapper {
+  background: white;
+}
+.contact-text {
+  font-family: "Parisienne";
+  font-size: 40px;
+ text-align: right;
+  margin-right: 140px;
+
+}
+.contact-text span {
+  border-bottom: 2px solid red;
+  font-size: 45px;
+}
+form {
+text-align: right;
+  background: white;
+   margin-right: 70px;
+ font-family: 'Slabo 27px';
+  font-size: 20px;
+}
+form #name {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 3px;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #BDBDBD;
+}
+form #mail {
+    width: 300px;
+  height: 30px;
+  margin-bottom: 3px;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #BDBDBD;
+
+}
+form #msg {
+   width: 300px;
+  height: 60px;
+  margin-bottom: 10px;
+  border: 2px solid #EEEEEE;
+   border-radius: 5px;
+  box-shadow: 1px 1px 1px #BDBDBD;
+
+}
+.button button {
+  color: black;
+background: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 3px;
+  border: 1px solid #BDBDBD;
+box-shadow: 1px 2px 2px #BDBDBD;
+  margin-bottom: 10px;
+ font-family: 'Slabo 27px';
+}
+.logo-bottom {
+  display: inline;
+  float: left;
+  margin-left: 30px;
+}
+.logo {
+ font-size: 100px;
+  line-height: 10px;
+  letter-spacing: 5px;
+  font-family: "Wire One";
+  margin-bottom: 16px;
+  color: black;
+}
+.logo-bottom h3 {
+  color: black;
+  position: absolute;
+ font-family: 'Parisienne';
+  font-size: 33px;
+
+}
