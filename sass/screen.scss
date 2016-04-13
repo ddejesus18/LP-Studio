@@ -1,0 +1,320 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+
+//colors
+$black: black;
+$white:  white;
+$color_thunderbird_approx: #b71c1c;
+$red:  red;
+$color_silver_approx: #bdbdbd;
+$color_gallery_approx: #eeeeee;
+
+//fonts
+$font_0: Josefin Slab;
+$font_1: Wire One;
+$font_2: Parisienne;
+$font_3: Slabo 27px;
+
+//@extend-elements
+//original selectors
+//about-wrapper h2, .about-wrapper p
+%extend_1 {
+	width: 40%;
+	display: inline-block;
+	margin-left: 30px;
+	font-family: $font_3;
+}
+
+
+body {
+	background: $red;
+	font-family: $font_0;
+	margin: 0;
+}
+nav {
+	.menu-tab {
+		float: right;
+		display: block;
+		position: relative;
+		margin-top: -50px;
+		margin-right: 1%;
+	}
+	hr {
+		width: 40px;
+		border: 2px solid $white;
+	}
+}
+.showing {
+	list-style-type: none;
+	text-align: center;
+	background-color: $white;
+	padding: 10px;
+	position: fixed;
+	z-index: 100;
+	margin-top: -70px;
+	li {
+		display: inline;
+		padding: 10px;
+		font-size: 20px;
+	}
+	a {
+		text-decoration: none;
+		color: $black;
+		&:hover {
+			color: $color_thunderbird_approx;
+		}
+	}
+}
+header {
+	color: $white;
+	text-align: center;
+	font-size: 150px;
+	margin-top: 70px;
+	letter-spacing: 5px;
+	font-family: $font_1;
+	span {
+		letter-spacing: 5px;
+	}
+}
+.sub-heading {
+	text-align: center;
+	color: $white;
+	font-family: $font_2;
+	font-size: 45px;
+	margin-top: -24px;
+}
+.main-wrapper {
+	margin: 0 auto;
+	width: 90%;
+	background: $white;
+	height: 90%;
+}
+.about-wrapper {
+	width: 90%;
+	margin-bottom: 90px;
+	h2 {
+		padding-top: 40px;
+		line-height: 50px;
+		font-size: 30px;
+		margin-left: 30px;
+		font-size: 35px;
+		font-family: $font_2;
+		span {
+			font-size: 50px;
+			border-bottom: 2px solid $red;
+		}
+	}
+	p {
+		@extend %extend_1;
+	}
+	img {
+		float: right;
+		display: inline-block;
+		padding: 2px;
+		margin-top: -60px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 50%;
+		width: 250px;
+		height: 250px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 2px 2px 2px 2px $color_silver_approx;
+	}
+}
+.jumbo-content {
+	position: relative;
+	img {
+		width: 100%;
+		height: auto;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: skewY(2.2deg);
+		margin-bottom: -100px;
+		display: inline;
+		opacity: 0.6;
+	}
+	h4 {
+		position: absolute;
+		color: $black;
+		margin-top: -400px;
+		margin-left: 200px;
+		display: block;
+		font-size: 60px;
+		border: 13px double $white;
+		padding: 20px;
+	}
+}
+.gallery {
+	position: relative;
+	padding: 10px;
+	color: $white;
+	text-align: center;
+	margin-top: 60px;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -26px;
+		width: 100%;
+		height: 60px;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: skewY(2.2deg);
+	}
+	h2 {
+		font-size: 40px;
+		font-family: $font_2;
+		text-align: center;
+		color: $black;
+		span {
+			font-size: 60px;
+			border-bottom: 2px solid $white;
+		}
+	}
+}
+.images-scroll {
+	overflow: scroll;
+	height: 500px;
+	display: hidden;
+	right: 0;
+}
+.map {
+	height: 300px;
+}
+.map-content {
+	position: relative;
+	float: left;
+	width: 30%;
+	margin-left: 30px;
+	h3 {
+		font-family: $font_2;
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+}
+iframe {
+	position: relative;
+	float: right;
+	width: 50%;
+	height: 270px;
+	margin-top: 30px;
+}
+.contact-wrapper {
+	background: $color_thunderbird_approx;
+	color: $white;
+}
+.contact-text {
+	font-family: $font_2;
+	font-size: 40px;
+	text-align: right;
+	margin-right: 140px;
+	span {
+		font-size: 45px;
+	}
+}
+form {
+	background: $color_thunderbird_approx;
+	text-align: right;
+	margin-right: 70px;
+	font-family: $font_3;
+	font-size: 20px;
+	#name {
+		width: 300px;
+		height: 30px;
+		margin-bottom: 3px;
+		border: 2px solid $color_gallery_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 1px $color_silver_approx;
+	}
+	#mail {
+		width: 300px;
+		height: 30px;
+		margin-bottom: 3px;
+		border: 2px solid $color_gallery_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 1px $color_silver_approx;
+	}
+	#msg {
+		width: 300px;
+		height: 60px;
+		margin-bottom: 10px;
+		border: 2px solid $color_gallery_approx;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 5px;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 1px $color_silver_approx;
+	}
+}
+.logo-bottom {
+	background: $color_thunderbird_approx;
+	display: inline;
+	float: left;
+	margin-left: 30px;
+	h3 {
+		position: absolute;
+		font-family: $font_2;
+		font-size: 33px;
+	}
+}
+.logo {
+	font-size: 100px;
+	line-height: 10px;
+	letter-spacing: 5px;
+	font-family: $font_1;
+	margin-bottom: 16px;
+}
+about-wrapper h2 {
+	@extend %extend_1;
+}
+.row-1-photos img {
+	display: inline;
+	width: 375px;
+	height: 300px;
+	margin: 5Px 5px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 3px 2px 2px $black;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.row-2-photos img {
+	display: inline;
+	width: 375px;
+	height: 300px;
+	margin: 5Px 5px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 3px 2px 2px $black;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.row-3-photos img {
+	display: inline;
+	width: 375px;
+	height: 300px;
+	margin: 5Px 5px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 3px 2px 2px $black;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+.button button {
+	color: $black;
+	background: $white;
+	padding: 5px 10px;
+	font-size: 20px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 3px;
+	border: 1px solid $color_silver_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 2px 2px $color_silver_approx;
+	margin-bottom: 10px;
+	font-family: $font_3;
+}
+.testing {
+  width: percentage(5/7);
+  height: 10;
+}
