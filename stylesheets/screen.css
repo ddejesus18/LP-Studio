@@ -2,7 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 25, ../sass/screen.scss */
 .about-wrapper p, about-wrapper h2 {
   width: 40%;
   display: inline-block;
@@ -10,14 +9,12 @@
   font-family: Slabo 27px;
 }
 
-/* line 33, ../sass/screen.scss */
 body {
-  background: red;
+  background: black;
   font-family: Josefin Slab;
   margin: 0;
 }
 
-/* line 39, ../sass/screen.scss */
 nav .menu-tab {
   float: right;
   display: block;
@@ -25,13 +22,11 @@ nav .menu-tab {
   margin-top: -50px;
   margin-right: 1%;
 }
-/* line 46, ../sass/screen.scss */
 nav hr {
   width: 40px;
   border: 2px solid white;
 }
 
-/* line 51, ../sass/screen.scss */
 .showing {
   list-style-type: none;
   text-align: center;
@@ -41,23 +36,19 @@ nav hr {
   z-index: 100;
   margin-top: -70px;
 }
-/* line 59, ../sass/screen.scss */
 .showing li {
   display: inline;
   padding: 10px;
   font-size: 20px;
 }
-/* line 64, ../sass/screen.scss */
 .showing a {
   text-decoration: none;
   color: black;
 }
-/* line 67, ../sass/screen.scss */
 .showing a:hover {
   color: #b71c1c;
 }
 
-/* line 72, ../sass/screen.scss */
 header {
   color: white;
   text-align: center;
@@ -66,12 +57,10 @@ header {
   letter-spacing: 5px;
   font-family: Wire One;
 }
-/* line 79, ../sass/screen.scss */
 header span {
   letter-spacing: 5px;
 }
 
-/* line 83, ../sass/screen.scss */
 .sub-heading {
   text-align: center;
   color: white;
@@ -80,7 +69,6 @@ header span {
   margin-top: -24px;
 }
 
-/* line 90, ../sass/screen.scss */
 .main-wrapper {
   margin: 0 auto;
   width: 90%;
@@ -88,12 +76,10 @@ header span {
   height: 90%;
 }
 
-/* line 96, ../sass/screen.scss */
 .about-wrapper {
   width: 90%;
   margin-bottom: 90px;
 }
-/* line 99, ../sass/screen.scss */
 .about-wrapper h2 {
   padding-top: 40px;
   line-height: 50px;
@@ -102,12 +88,10 @@ header span {
   font-size: 35px;
   font-family: Parisienne;
 }
-/* line 106, ../sass/screen.scss */
 .about-wrapper h2 span {
   font-size: 50px;
   border-bottom: 2px solid red;
 }
-/* line 114, ../sass/screen.scss */
 .about-wrapper img {
   float: right;
   display: inline-block;
@@ -119,11 +103,9 @@ header span {
   box-shadow: 2px 2px 2px 2px #bdbdbd;
 }
 
-/* line 127, ../sass/screen.scss */
 .jumbo-content {
   position: relative;
 }
-/* line 129, ../sass/screen.scss */
 .jumbo-content img {
   width: 100%;
   height: auto;
@@ -132,7 +114,6 @@ header span {
   display: inline;
   opacity: 0.6;
 }
-/* line 138, ../sass/screen.scss */
 .jumbo-content h4 {
   position: absolute;
   color: black;
@@ -144,7 +125,6 @@ header span {
   padding: 20px;
 }
 
-/* line 149, ../sass/screen.scss */
 .gallery {
   position: relative;
   padding: 10px;
@@ -152,7 +132,6 @@ header span {
   text-align: center;
   margin-top: 60px;
 }
-/* line 155, ../sass/screen.scss */
 .gallery:before {
   content: '';
   position: absolute;
@@ -162,20 +141,17 @@ header span {
   height: 60px;
   transform: skewY(2.2deg);
 }
-/* line 165, ../sass/screen.scss */
 .gallery h2 {
   font-size: 40px;
   font-family: Parisienne;
   text-align: center;
   color: black;
 }
-/* line 170, ../sass/screen.scss */
 .gallery h2 span {
   font-size: 60px;
   border-bottom: 2px solid white;
 }
 
-/* line 176, ../sass/screen.scss */
 .images-scroll {
   overflow: scroll;
   height: 500px;
@@ -183,26 +159,22 @@ header span {
   right: 0;
 }
 
-/* line 182, ../sass/screen.scss */
 .map {
   height: 300px;
 }
 
-/* line 185, ../sass/screen.scss */
 .map-content {
   position: relative;
   float: left;
   width: 30%;
   margin-left: 30px;
 }
-/* line 190, ../sass/screen.scss */
 .map-content h3 {
   font-family: Parisienne;
   font-size: 40px;
   margin-bottom: 10px;
 }
 
-/* line 196, ../sass/screen.scss */
 iframe {
   position: relative;
   float: right;
@@ -211,25 +183,21 @@ iframe {
   margin-top: 30px;
 }
 
-/* line 203, ../sass/screen.scss */
 .contact-wrapper {
   background: #b71c1c;
   color: white;
 }
 
-/* line 207, ../sass/screen.scss */
 .contact-text {
   font-family: Parisienne;
   font-size: 40px;
   text-align: right;
   margin-right: 140px;
 }
-/* line 212, ../sass/screen.scss */
 .contact-text span {
   font-size: 45px;
 }
 
-/* line 216, ../sass/screen.scss */
 form {
   background: #b71c1c;
   text-align: right;
@@ -237,7 +205,6 @@ form {
   font-family: Slabo 27px;
   font-size: 20px;
 }
-/* line 222, ../sass/screen.scss */
 form #name {
   width: 300px;
   height: 30px;
@@ -246,7 +213,6 @@ form #name {
   border-radius: 5px;
   box-shadow: 1px 1px 1px #bdbdbd;
 }
-/* line 232, ../sass/screen.scss */
 form #mail {
   width: 300px;
   height: 30px;
@@ -255,7 +221,6 @@ form #mail {
   border-radius: 5px;
   box-shadow: 1px 1px 1px #bdbdbd;
 }
-/* line 242, ../sass/screen.scss */
 form #msg {
   width: 300px;
   height: 60px;
@@ -265,21 +230,18 @@ form #msg {
   box-shadow: 1px 1px 1px #bdbdbd;
 }
 
-/* line 253, ../sass/screen.scss */
 .logo-bottom {
   background: #b71c1c;
   display: inline;
   float: left;
   margin-left: 30px;
 }
-/* line 258, ../sass/screen.scss */
 .logo-bottom h3 {
   position: absolute;
   font-family: Parisienne;
   font-size: 33px;
 }
 
-/* line 264, ../sass/screen.scss */
 .logo {
   font-size: 100px;
   line-height: 10px;
@@ -288,7 +250,6 @@ form #msg {
   margin-bottom: 16px;
 }
 
-/* line 274, ../sass/screen.scss */
 .row-1-photos img {
   display: inline;
   width: 375px;
@@ -298,7 +259,6 @@ form #msg {
   box-sizing: border-box;
 }
 
-/* line 284, ../sass/screen.scss */
 .row-2-photos img {
   display: inline;
   width: 375px;
@@ -308,7 +268,6 @@ form #msg {
   box-sizing: border-box;
 }
 
-/* line 294, ../sass/screen.scss */
 .row-3-photos img {
   display: inline;
   width: 375px;
@@ -318,7 +277,6 @@ form #msg {
   box-sizing: border-box;
 }
 
-/* line 304, ../sass/screen.scss */
 .button button {
   color: black;
   background: white;
@@ -331,7 +289,6 @@ form #msg {
   font-family: Slabo 27px;
 }
 
-/* line 317, ../sass/screen.scss */
 .testing {
   width: 71.42857%;
   height: 10;
