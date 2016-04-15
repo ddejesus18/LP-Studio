@@ -59,6 +59,9 @@ nav {
 					display: inline;
 					padding: 30px;
 					font-size: 15px;
+					@media screen and (min-width: $x-small) and (max-width: $small) {
+						padding: 3px;
+					}
 				}
 				.ver-break {
 					font-size: 20px;
@@ -104,11 +107,12 @@ header {
 	height: 90%;
 }
 .about-wrapper {
-	width: 90%;
+	width: 100%;
 	margin-bottom: 90px;
 	@media screen and (min-width: $x-small) and (max-width: $small) {
 		margin: 0 auto;
 		text-align: center;
+		width: 100%;
 	}
 	h2 {
 		padding-top: 40px;
@@ -159,7 +163,6 @@ header {
 		height: auto;
 		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 		transform: skewY(1.2deg);
-		margin-bottom: -100px;
 		display: inline;
 		opacity: 0.6;
 	}
@@ -178,8 +181,11 @@ header {
 	position: relative;
 	padding: 10px;
 	color: $white;
+	margin-top: 150px;
 	text-align: center;
-	margin-top: 60px;
+	@media screen and (min-width: $x-small) and (max-width: $small)  {
+		margin-top: -10px;
+}
 	&:before {
 		content: '';
 		position: absolute;
@@ -189,46 +195,76 @@ header {
 		height: 60px;
 		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 		transform: skewY(2.2deg);
-	}
+}
 	h2 {
 		font-size: 40px;
 		font-family: $font_2;
-		text-align: center;
+		text-align: left;
 		color: $black;
 		span {
 			font-size: 60px;
-			border-bottom: 2px solid $white;
+		}
+		@media screen and (min-width: $x-small) and (max-width: $small) {
+		color: $black;
+		width: 80%;
+		margin: 10px auto;
+		text-align: left;
 		}
 	}
 .images-scroll {
 	overflow: scroll;
 	height: 500px;
 	display: hidden;
-	right: 0;
 }
-.row-photos img {
+.wrapper-photos{
 	display: inline;
-	width: 375px;
 	height: 300px;
-	margin: 5Px 5px;
+	margin: 5px 5px;
+}
+	.row-photos img {
 	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 	box-shadow: 3px 2px 2px $black;
 	//Instead of the line below you could use @include box-sizing($bs)
 	box-sizing: border-box;
+	margin-left: -90px;
+	margin-bottom: 5px;
+	display: block;
+	transition: .3s ease-in-out;
+	width: 80%;
 	@media screen and (min-width: $x-small) and (max-width: $small) {
 		width: 90%;
+		text-align: left;
 		display: block;
-	}
-}
+		margin-left: -40px;
+		margin-bottom: 5px;
+		}
+		&:hover {
+		margin-left: 0;
+			}
+		}
 }
 .map {
 	height: 300px;
+	background-color: $color_thunderbird_approx;
+	@media screen and (min-width: $x-small) and (max-width: $small) {
+display: block;
+text-align: left;
+margin: 0 auto;
+width: 100%;
+color: $white;
+	}
 }
 .map-content {
 	position: relative;
 	float: left;
 	width: 30%;
 	margin-left: 30px;
+	@media screen and (min-width: $x-small) and (max-width: $small) {
+width: 90%;
+position: relative;
+text-align: left;
+
+}
 	h3 {
 		font-family: $font_2;
 		font-size: 40px;
@@ -241,6 +277,11 @@ iframe {
 	width: 50%;
 	height: 270px;
 	margin-top: 30px;
+	@media screen and (min-width: $x-small) and (max-width: $small) {
+		width: 100%;
+		display: block;
+		margin-top: 0;
+}
 }
 .contact-wrapper {
 	background: $color_thunderbird_approx;
