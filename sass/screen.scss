@@ -19,6 +19,11 @@ $font_1: Wire One;
 $font_2: Parisienne;
 $font_3: Slabo 27px;
 
+
+//size
+$x-small: 320px;
+$small: 500px;
+$medium: 768px;
 //@extend-elements
 //original selectors
 //about-wrapper h2, .about-wrapper p
@@ -29,43 +34,41 @@ $font_3: Slabo 27px;
 	font-family: $font_3;
 }
 
-
 body {
 	background: $black;
 	font-family: $font_0;
 	margin: 0;
 }
 nav {
-	.menu-tab {
-		float: right;
-		display: block;
-		position: relative;
-		margin-top: -50px;
-		margin-right: 1%;
-	}
-	hr {
-		width: 40px;
-		border: 2px solid $white;
-	}
-}
-.showing {
-	list-style-type: none;
+	position: relative;
 	text-align: center;
-	background-color: $white;
-	padding: 10px;
-	position: fixed;
-	z-index: 100;
-	margin-top: -70px;
-	li {
-		display: inline;
-		padding: 10px;
-		font-size: 20px;
-	}
-	a {
-		text-decoration: none;
-		color: $black;
-		&:hover {
-			color: $color_thunderbird_approx;
+	margin: 0 auto;
+		.showing {
+			margin: 0 auto;
+			width: 100%;
+			margin-top: -70px;
+			list-style-type: none;
+			text-align: center;
+			padding: 10px;
+			position: fixed;
+			z-index: 100;
+			color: white;
+			background-color: black;
+			opacity: 0.8;
+				li {
+					display: inline;
+					padding: 30px;
+					font-size: 15px;
+				}
+				.ver-break {
+					font-size: 20px;
+				}
+				a {
+					text-decoration: none;
+					color: white;
+					&:hover {
+						color: $color_thunderbird_approx;
+			}
 		}
 	}
 }
@@ -79,6 +82,9 @@ header {
 	span {
 		letter-spacing: 5px;
 	}
+	@media screen and (min-width: $x-small)  and (max-width: $small) {
+		font-size: 75px;
+	}
 }
 .sub-heading {
 	text-align: center;
@@ -86,6 +92,10 @@ header {
 	font-family: $font_2;
 	font-size: 45px;
 	margin-top: -24px;
+	@media screen and (min-width: $x-small) and (max-width: $small)  {
+		font-size: 25px;
+		margin-top: 5px;
+	}
 }
 .main-wrapper {
 	margin: 0 auto;
@@ -96,6 +106,10 @@ header {
 .about-wrapper {
 	width: 90%;
 	margin-bottom: 90px;
+	@media screen and (min-width: $x-small) and (max-width: $small) {
+		margin: 0 auto;
+		text-align: center;
+	}
 	h2 {
 		padding-top: 40px;
 		line-height: 50px;
@@ -107,36 +121,50 @@ header {
 			font-size: 50px;
 			border-bottom: 2px solid $red;
 		}
+		@media screen and (min-width: $x-small) and (max-width: $small)  {
+			text-align: left;
+		}
 	}
 	p {
 		@extend %extend_1;
+		@media screen and (min-width: $x-small) and (max-width: $small)  {
+			width: 90%;
+			position: relative;
+			margin-bottom: 50px;
+			text-align: left;
 	}
+}
 	img {
 		float: right;
-		display: inline-block;
+		display: inline;
 		padding: 2px;
-		margin-top: -60px;
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-		border-radius: 50%;
-		width: 250px;
-		height: 250px;
+		margin-top: -50px;
+		width: 30%;
+		height: auto;
 		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		box-shadow: 2px 2px 2px 2px $color_silver_approx;
-	}
+		@media screen and (min-width: $x-small) and (max-width: $small) {
+			float: none;
+			width: 80%;
+		}
+ }
 }
 .jumbo-content {
 	position: relative;
+@media screen and (min-width: $x-small) and (max-width: $small)  {
+	display: none;
+}
 	img {
 		width: 100%;
 		height: auto;
 		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: skewY(2.2deg);
+		transform: skewY(1.2deg);
 		margin-bottom: -100px;
 		display: inline;
 		opacity: 0.6;
 	}
 	h4 {
-		position: absolute;
+		position: relative;
 		color: $black;
 		margin-top: -400px;
 		margin-left: 200px;
@@ -172,12 +200,26 @@ header {
 			border-bottom: 2px solid $white;
 		}
 	}
-}
 .images-scroll {
 	overflow: scroll;
 	height: 500px;
 	display: hidden;
 	right: 0;
+}
+.row-photos img {
+	display: inline;
+	width: 375px;
+	height: 300px;
+	margin: 5Px 5px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 3px 2px 2px $black;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	@media screen and (min-width: $x-small) and (max-width: $small) {
+		width: 90%;
+		display: block;
+	}
+}
 }
 .map {
 	height: 300px;
@@ -271,36 +313,6 @@ form {
 about-wrapper h2 {
 	@extend %extend_1;
 }
-.row-1-photos img {
-	display: inline;
-	width: 375px;
-	height: 300px;
-	margin: 5Px 5px;
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: 3px 2px 2px $black;
-	//Instead of the line below you could use @include box-sizing($bs)
-	box-sizing: border-box;
-}
-.row-2-photos img {
-	display: inline;
-	width: 375px;
-	height: 300px;
-	margin: 5Px 5px;
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: 3px 2px 2px $black;
-	//Instead of the line below you could use @include box-sizing($bs)
-	box-sizing: border-box;
-}
-.row-3-photos img {
-	display: inline;
-	width: 375px;
-	height: 300px;
-	margin: 5Px 5px;
-	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: 3px 2px 2px $black;
-	//Instead of the line below you could use @include box-sizing($bs)
-	box-sizing: border-box;
-}
 .button button {
 	color: $black;
 	background: $white;
@@ -313,8 +325,4 @@ about-wrapper h2 {
 	box-shadow: 1px 2px 2px $color_silver_approx;
 	margin-bottom: 10px;
 	font-family: $font_3;
-}
-.testing {
-  width: percentage(5/7);
-  height: 10;
 }

@@ -15,37 +15,37 @@ body {
   margin: 0;
 }
 
-nav .menu-tab {
-  float: right;
-  display: block;
+nav {
   position: relative;
-  margin-top: -50px;
-  margin-right: 1%;
+  text-align: center;
+  margin: 0 auto;
 }
-nav hr {
-  width: 40px;
-  border: 2px solid white;
-}
-
-.showing {
+nav .showing {
+  margin: 0 auto;
+  width: 100%;
+  margin-top: -70px;
   list-style-type: none;
   text-align: center;
-  background-color: white;
   padding: 10px;
   position: fixed;
   z-index: 100;
-  margin-top: -70px;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
 }
-.showing li {
+nav .showing li {
   display: inline;
-  padding: 10px;
+  padding: 30px;
+  font-size: 15px;
+}
+nav .showing .ver-break {
   font-size: 20px;
 }
-.showing a {
+nav .showing a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
-.showing a:hover {
+nav .showing a:hover {
   color: #b71c1c;
 }
 
@@ -60,6 +60,11 @@ header {
 header span {
   letter-spacing: 5px;
 }
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  header {
+    font-size: 75px;
+  }
+}
 
 .sub-heading {
   text-align: center;
@@ -67,6 +72,12 @@ header span {
   font-family: Parisienne;
   font-size: 45px;
   margin-top: -24px;
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .sub-heading {
+    font-size: 25px;
+    margin-top: 5px;
+  }
 }
 
 .main-wrapper {
@@ -80,6 +91,12 @@ header span {
   width: 90%;
   margin-bottom: 90px;
 }
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .about-wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 .about-wrapper h2 {
   padding-top: 40px;
   line-height: 50px;
@@ -92,30 +109,53 @@ header span {
   font-size: 50px;
   border-bottom: 2px solid red;
 }
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .about-wrapper h2 {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .about-wrapper p {
+    width: 90%;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+}
 .about-wrapper img {
   float: right;
-  display: inline-block;
+  display: inline;
   padding: 2px;
-  margin-top: -60px;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  margin-top: -50px;
+  width: 30%;
+  height: auto;
   box-shadow: 2px 2px 2px 2px #bdbdbd;
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .about-wrapper img {
+    float: none;
+    width: 80%;
+  }
 }
 
 .jumbo-content {
   position: relative;
 }
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .jumbo-content {
+    display: none;
+  }
+}
 .jumbo-content img {
   width: 100%;
   height: auto;
-  transform: skewY(2.2deg);
+  transform: skewY(1.2deg);
   margin-bottom: -100px;
   display: inline;
   opacity: 0.6;
 }
 .jumbo-content h4 {
-  position: absolute;
+  position: relative;
   color: black;
   margin-top: -400px;
   margin-left: 200px;
@@ -151,12 +191,25 @@ header span {
   font-size: 60px;
   border-bottom: 2px solid white;
 }
-
-.images-scroll {
+.gallery .images-scroll {
   overflow: scroll;
   height: 500px;
   display: hidden;
   right: 0;
+}
+.gallery .row-photos img {
+  display: inline;
+  width: 375px;
+  height: 300px;
+  margin: 5Px 5px;
+  box-shadow: 3px 2px 2px black;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .gallery .row-photos img {
+    width: 90%;
+    display: block;
+  }
 }
 
 .map {
@@ -250,33 +303,6 @@ form #msg {
   margin-bottom: 16px;
 }
 
-.row-1-photos img {
-  display: inline;
-  width: 375px;
-  height: 300px;
-  margin: 5Px 5px;
-  box-shadow: 3px 2px 2px black;
-  box-sizing: border-box;
-}
-
-.row-2-photos img {
-  display: inline;
-  width: 375px;
-  height: 300px;
-  margin: 5Px 5px;
-  box-shadow: 3px 2px 2px black;
-  box-sizing: border-box;
-}
-
-.row-3-photos img {
-  display: inline;
-  width: 375px;
-  height: 300px;
-  margin: 5Px 5px;
-  box-shadow: 3px 2px 2px black;
-  box-sizing: border-box;
-}
-
 .button button {
   color: black;
   background: white;
@@ -287,9 +313,4 @@ form #msg {
   box-shadow: 1px 2px 2px #bdbdbd;
   margin-bottom: 10px;
   font-family: Slabo 27px;
-}
-
-.testing {
-  width: 71.42857%;
-  height: 10;
 }
