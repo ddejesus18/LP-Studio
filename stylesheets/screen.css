@@ -10,7 +10,7 @@
 }
 
 body {
-  background: black;
+  background-color: black;
   font-family: Josefin Slab;
   margin: 0;
 }
@@ -87,7 +87,7 @@ header span {
 
 .main-wrapper {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   background: white;
   height: 90%;
 }
@@ -133,7 +133,8 @@ header span {
   display: inline;
   padding: 2px;
   margin-top: -50px;
-  width: 30%;
+  margin-right: 20px;
+  width: 250px;
   height: auto;
   box-shadow: 2px 2px 2px 2px #bdbdbd;
 }
@@ -144,34 +145,35 @@ header span {
   }
 }
 
-.jumbo-content {
-  position: relative;
+/*.jumbo-content {
+	position: relative;
+@media screen and (min-width: $x-small) and (max-width: $small)  {
+	display: none;
 }
-@media screen and (min-width: 320px) and (max-width: 500px) {
-  .jumbo-content {
-    display: none;
-  }
+	img {
+		width: 100%;
+		height: auto;
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: skewY(1.2deg);
+		display: inline;
+		opacity: 0.6;
+	}
+	h4 {
+		position: relative;
+		color: $black;
+		margin-top: -400px;
+		margin-left: 200px;
+		display: block;
+		font-size: 60px;
+		border: 13px double $white;
+		padding: 20px;
+	}
 }
-.jumbo-content img {
-  width: 100%;
-  height: auto;
-  transform: skewY(1.2deg);
-  display: inline;
-  opacity: 0.6;
-}
-.jumbo-content h4 {
-  position: relative;
-  color: black;
-  margin-top: -400px;
-  margin-left: 200px;
-  display: block;
-  font-size: 60px;
-  border: 13px double white;
-  padding: 20px;
-}
-
+*/
 .gallery {
+  background-color: #d32f2f;
   position: relative;
+  overflow: hidden;
   padding: 10px;
   color: white;
   margin-top: 150px;
@@ -185,6 +187,7 @@ header span {
 .gallery:before {
   content: '';
   position: absolute;
+  background-color: #d32f2f;
   left: 0;
   top: -26px;
   width: 100%;
@@ -195,49 +198,45 @@ header span {
   font-size: 40px;
   font-family: Parisienne;
   text-align: left;
-  color: black;
+  color: white;
 }
 .gallery h2 span {
   font-size: 60px;
 }
 @media screen and (min-width: 320px) and (max-width: 500px) {
   .gallery h2 {
-    color: black;
     width: 80%;
     margin: 10px auto;
     text-align: left;
   }
 }
 .gallery .images-scroll {
-  overflow: scroll;
-  height: 500px;
-  display: hidden;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
-.gallery .wrapper-photos {
-  display: inline;
-  height: 300px;
-  margin: 5px 5px;
-}
-.gallery .row-photos img {
-  box-shadow: 3px 2px 2px black;
-  box-sizing: border-box;
-  margin-left: -90px;
-  margin-bottom: 5px;
-  display: block;
+.gallery img {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  margin: -3px;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden;
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-  width: 80%;
 }
 @media screen and (min-width: 320px) and (max-width: 500px) {
-  .gallery .row-photos img {
-    width: 90%;
+  .gallery img {
+    width: 30%;
     text-align: left;
     display: block;
-    margin-left: -40px;
-    margin-bottom: 5px;
   }
 }
-.gallery .row-photos img:hover {
-  margin-left: 0;
+.gallery img:hover {
+  transform: scale(1.1);
 }
 
 .map {

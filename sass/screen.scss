@@ -35,7 +35,7 @@ $medium: 768px;
 }
 
 body {
-	background: $black;
+	background-color: black;
 	font-family: $font_0;
 	margin: 0;
 }
@@ -102,7 +102,7 @@ header {
 }
 .main-wrapper {
 	margin: 0 auto;
-	width: 90%;
+	width: 100%;
 	background: $white;
 	height: 90%;
 }
@@ -143,7 +143,8 @@ header {
 		display: inline;
 		padding: 2px;
 		margin-top: -50px;
-		width: 30%;
+		margin-right: 20px;
+		width: 250px;
 		height: auto;
 		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
 		box-shadow: 2px 2px 2px 2px $color_silver_approx;
@@ -153,7 +154,7 @@ header {
 		}
  }
 }
-.jumbo-content {
+/*.jumbo-content {
 	position: relative;
 @media screen and (min-width: $x-small) and (max-width: $small)  {
 	display: none;
@@ -177,8 +178,11 @@ header {
 		padding: 20px;
 	}
 }
+*/
 .gallery {
+ background-color: #d32f2f;
 	position: relative;
+	overflow: hidden;
 	padding: 10px;
 	color: $white;
 	margin-top: 150px;
@@ -189,6 +193,7 @@ header {
 	&:before {
 		content: '';
 		position: absolute;
+		background-color: #d32f2f;
 		left: 0;
 		top: -26px;
 		width: 100%;
@@ -200,49 +205,45 @@ header {
 		font-size: 40px;
 		font-family: $font_2;
 		text-align: left;
-		color: $black;
+		color: $white;
 		span {
 			font-size: 60px;
 		}
 		@media screen and (min-width: $x-small) and (max-width: $small) {
-		color: $black;
 		width: 80%;
 		margin: 10px auto;
 		text-align: left;
 		}
 	}
 .images-scroll {
-	overflow: scroll;
-	height: 500px;
-	display: hidden;
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
 }
-.wrapper-photos{
-	display: inline;
-	height: 300px;
-	margin: 5px 5px;
-}
-	.row-photos img {
+	 img {
 	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-	box-shadow: 3px 2px 2px $black;
-	//Instead of the line below you could use @include box-sizing($bs)
-	box-sizing: border-box;
-	margin-left: -90px;
-	margin-bottom: 5px;
-	display: block;
+	//Instead of the line below you could use @include box-sizing($bs
+position: relative;
+	width: 250px;
+	height: 200px;
+	margin: -3px;
+	padding: 0;
+	display: inline-block;
+	overflow: hidden;
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-	width: 80%;
 	@media screen and (min-width: $x-small) and (max-width: $small) {
-		width: 90%;
+		width: 30%;
 		text-align: left;
 		display: block;
-		margin-left: -40px;
-		margin-bottom: 5px;
 		}
 		&:hover {
-		margin-left: 0;
-			}
+		transform: scale(1.1);
+	}
 		}
-}
+	}
 .map {
 	height: 300px;
 	background-color: $color_thunderbird_approx;

@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+}
+
+.background-image {
+  background: linear-gradient(rgba(1, 1, 1, 0.4), rgba(1, 1, 1, 0.8)), url("https://images.unsplash.com/photo-1448613363487-bd9ad4974b7b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d9835c981e90980a92df2e81b45057d5");
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Josefin Slab;
+  margin: 0;
+}
+
+.heading-wrapper header {
+  color: white;
+  text-align: center;
+  font-size: 150px;
+  margin-top: 70px;
+  letter-spacing: 5px;
+  font-family: Wire One;
+}
+.heading-wrapper header span {
+  letter-spacing: 5px;
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .heading-wrapper header {
+    font-size: 75px;
+  }
+}
+.heading-wrapper .sub-heading {
+  text-align: center;
+  color: white;
+  font-family: Parisienne;
+  font-size: 45px;
+  margin-top: -24px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .heading-wrapper .sub-heading {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+}
+
+.enter {
+  margin: 0 auto;
+}
+.enter a {
+  text-decoration: none;
+}
+.enter a:visited {
+  text-decoration: none;
+}
+.enter button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  box-shadow: 2px 2px 2px 2px #515151;
+  padding: 10px 30px;
+  text-align: center;
+  color: white;
+  display: block;
+  font-size: 30px;
+  font-family: Josefin Slab;
+  transition: .2s ease-in-out .2s;
+}
+.enter button:hover {
+  background-color: rgba(1, 1, 1, 0.5);
+}
